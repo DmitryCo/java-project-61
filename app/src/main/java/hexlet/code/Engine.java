@@ -33,8 +33,8 @@ public class Engine {
                         + answer + "'.\n" + "Let's try again, " + userName + "!");
                 return;
             }
-            System.out.println("Congratulations, " + userName + "!");
         }
+        System.out.println("Congratulations, " + userName + "!");
     }
 
     public static int numberRandomize() {
