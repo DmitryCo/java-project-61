@@ -45,6 +45,12 @@ public class Engine {
         return random.nextInt(minRandomNumber, maxRandomNumber);
     }
 
+    public static int numberRandomize(int minRandomNumber, int maxRandomNumber) {
+        Random random = new Random();
+
+        return random.nextInt(minRandomNumber, maxRandomNumber);
+    }
+
     public static String mathOperationRandomize(String[] mathOperation) {
         Random random = new Random();
 
