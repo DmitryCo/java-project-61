@@ -5,15 +5,12 @@
 build
 
 **/logs/
-
 .settings
 bin
 .project*
 .classpath
 .idea/
 .factorypath
-
-
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
@@ -31,6 +28,7 @@ build/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+../.idea/
 
 ### Eclipse ###
 .apt_generated
@@ -56,3 +54,6 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+# Ignore the asciinema rec
+.cast
