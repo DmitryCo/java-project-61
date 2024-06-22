@@ -10,14 +10,14 @@ public class Even {
                 new String[Engine.TOTAL_CORRECT_ANSWERS_FOR_WIN][Engine.NUMBER_OF_ELEMENTS_OF_GAME_IN_ARRAY];
 
         for (String[] gameQuestionAndAnswer : gameQuestionsAndAnswers) {
-            int question = Engine.numberRandomize();
-            gameQuestionAndAnswer[Engine.INDEX_OF_QUESTION_IN_ARRAY] = Integer.toString(question);
-            gameQuestionAndAnswer[Engine.INDEX_OF_CORRECT_ANSWER_IN_ARRAY] = isEven(question);
+            int questionNumber = Engine.numberRandomize();
+            gameQuestionAndAnswer[Engine.INDEX_OF_QUESTION_IN_ARRAY] = Integer.toString(questionNumber);
+            gameQuestionAndAnswer[Engine.INDEX_OF_CORRECT_ANSWER_IN_ARRAY] = isEven(questionNumber);
         }
         Engine.runGame(RULE_OF_EVEN_GAME, gameQuestionsAndAnswers);
     }
 
-    public static String isEven(int question) {
-        return question % 2 == 0 ? "yes" : "no";
+    public static String isEven(int questionNumber) {
+        return questionNumber % 2 == 0 ? "yes" : "no";
     }
 }
