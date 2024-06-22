@@ -2,13 +2,15 @@
 
 ### Game launch examples (asciinema format):
 ### "Is Even"
-[![asciicast](https://asciinema.org/a/baz1htNFUO4EZrnnQdyyQlZxS.svg)](https://asciinema.org/a/baz1htNFUO4EZrnnQdyyQlZxS)
+[![asciicast](https://asciinema.org/a/589Bo3ZFHtDRtK91oSDjCLIeZ.svg)](https://asciinema.org/a/589Bo3ZFHtDRtK91oSDjCLIeZ)
 ### "Calculator"
 [![asciicast](https://asciinema.org/a/AM2ikNStqKXjnKLvYIq3POHk0.svg)](https://asciinema.org/a/AM2ikNStqKXjnKLvYIq3POHk0)
 ### "Greatest Common Divisor"
 [![asciicast](https://asciinema.org/a/jeaKaeQmt3FQSIpDmoTliwBIF.svg)](https://asciinema.org/a/jeaKaeQmt3FQSIpDmoTliwBIF)
 ### "Arithmetic Progression"
 [![asciicast](https://asciinema.org/a/cDVTmppuv4PAKeLhCQt0rgouH.svg)](https://asciinema.org/a/cDVTmppuv4PAKeLhCQt0rgouH)
+### "Is Prime"
+[![asciicast](https://asciinema.org/a/qgZdA6M6btavFURH0zsNfVrTf.svg)](https://asciinema.org/a/qgZdA6M6btavFURH0zsNfVrTf)
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/DmitryCo/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/DmitryCo/java-project-61/actions)
