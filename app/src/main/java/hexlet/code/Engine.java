@@ -1,9 +1,7 @@
 package hexlet.code;
 
-
 import java.util.Random;
 import java.util.Scanner;
-
 
 public class Engine {
     public static final int TOTAL_CORRECT_ANSWERS_FOR_WIN = 3;
