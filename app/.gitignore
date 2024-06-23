@@ -10,7 +10,6 @@ bin
 .classpath
 .idea/
 .factorypath
-.gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
@@ -27,14 +26,10 @@ build/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-./.idea/
 
 ### Eclipse ###
 .apt_generated
-.classpath
-.factorypath
 .project
-.settings
 .springBeans
 .sts4-cache
 bin/
