@@ -12,10 +12,10 @@ public class Progression {
         for (String[] gameQuestionAndAnswer : gameQuestionsAndAnswers) {
             int progressionLength = Engine.numberRandomize(8, 11);
             int firstRandomNumber = Engine.numberRandomize();
-            int stepProgression = Engine.numberRandomize(1, 10) + 1;
+            int stepProgression = Engine.numberRandomize(1, 10);
 
             int[] progressionArray = getProgression(progressionLength, firstRandomNumber, stepProgression);
-            int indexOfHiddenProgressionNumber = (Engine.numberRandomize(1, 10) - 1);
+            int indexOfHiddenProgressionNumber = (Engine.numberRandomize(1, progressionLength));
             String progressionArrayWithHiddenNumber =
                     getProgressionWithHiddenNumber(progressionArray, indexOfHiddenProgressionNumber);
 
