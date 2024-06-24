@@ -6,8 +6,7 @@ public class Calc {
     public static final String RULE_OF_EVEN_GAME = "What is the result of the expression?";
     public static final int MIN_RANDOM_NUMBER = 1;
     public static final int MAX_RANDOM_NUMBER = 100;
-
-    public static String[] mathOperations = {" + ", " - ", " * "};
+    public static final String[] MATH_OPERATIONS = {" + ", " - ", " * "};
 
     public static void startCalcGame() {
         String[][] gameQuestionsAndAnswers =
@@ -16,7 +15,7 @@ public class Calc {
         for (String[] gameQuestionAndAnswer : gameQuestionsAndAnswers) {
             int firstRandomNumber = Engine.numberRandomize(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
             int secondRandomNumber = Engine.numberRandomize(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
-            String mathOperator = Engine.mathOperationRandomize(mathOperations);
+            String mathOperator = Engine.mathOperationRandomize(MATH_OPERATIONS);
             gameQuestionAndAnswer[Engine.INDEX_OF_QUESTION_IN_ARRAY] =
                     firstRandomNumber + mathOperator + secondRandomNumber;
             gameQuestionAndAnswer[Engine.INDEX_OF_CORRECT_ANSWER_IN_ARRAY] =
