@@ -35,14 +35,6 @@ public class Engine {
         System.out.println("Congratulations, " + userName + "!");
     }
 
-    public static int numberRandomize() {
-        Random random = new Random();
-        int minRandomNumber = 1;
-        int maxRandomNumber = 100;
-
-        return random.nextInt(minRandomNumber, maxRandomNumber);
-    }
-
     public static int numberRandomize(int minRandomNumber, int maxRandomNumber) {
         Random random = new Random();
 
