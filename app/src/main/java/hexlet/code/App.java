@@ -30,29 +30,14 @@ public class App {
 
     static void selectGames(String userChoice) {
         switch (userChoice) {
-            case "1":
-                Cli.getUserName();
-                break;
-            case "2":
-                Even.startEvenGame();
-                break;
-            case "3":
-                Calc.startCalcGame();
-                break;
-            case "4":
-                GCD.startGCDGame();
-                break;
-            case "5":
-                Progression.startProgressionGame();
-                break;
-            case "6":
-                Prime.startPrimeGame();
-                break;
-            case "0":
-                System.out.println("0 - Exit");
-                break;
-            default:
-                System.out.println("Wrong number entered. Please try again.");
+            case "1" -> Cli.getUserName();
+            case "2" -> Even.startEvenGame();
+            case "3" -> Calc.startCalcGame();
+            case "4" -> GCD.startGCDGame();
+            case "5" -> Progression.startProgressionGame();
+            case "6" -> Prime.startPrimeGame();
+            case "0" -> System.out.println("0 - Exit");
+            default -> System.out.println("Wrong number entered. Please try again.");
         }
     }
 }
