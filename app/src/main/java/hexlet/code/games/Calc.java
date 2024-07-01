@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Calc {
     public static final String RULE_OF_EVEN_GAME = "What is the result of the expression?";
@@ -13,9 +14,10 @@ public class Calc {
                 new String[Engine.TOTAL_CORRECT_ANSWERS_FOR_WIN][Engine.NUMBER_OF_ELEMENTS_OF_GAME_IN_ARRAY];
 
         for (String[] gameQuestionAndAnswer : gameQuestionsAndAnswers) {
-            int firstRandomNumber = Engine.numberRandomize(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
-            int secondRandomNumber = Engine.numberRandomize(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
-            String mathOperator = Engine.mathOperationRandomize(MATH_OPERATIONS);
+            int firstRandomNumber = Utils.numRandomize(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
+            int secondRandomNumber = Utils.numRandomize(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
+            String mathOperator =
+                    MATH_OPERATIONS[Utils.numRandomize(Integer.parseInt(MATH_OPERATIONS[0]), MATH_OPERATIONS.length)];
             gameQuestionAndAnswer[Engine.INDEX_OF_QUESTION_IN_ARRAY] =
                     firstRandomNumber + mathOperator + secondRandomNumber;
             gameQuestionAndAnswer[Engine.INDEX_OF_CORRECT_ANSWER_IN_ARRAY] =
