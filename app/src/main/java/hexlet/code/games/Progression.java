@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Progression {
     public static final String RULE_OF_PROGRESSION_GAME = "What number is missing in the progression?";
@@ -16,12 +17,12 @@ public class Progression {
                 new String[Engine.TOTAL_CORRECT_ANSWERS_FOR_WIN][Engine.NUMBER_OF_ELEMENTS_OF_GAME_IN_ARRAY];
 
         for (String[] gameQuestionAndAnswer : gameQuestionsAndAnswers) {
-            int progressionLength = Engine.numberRandomize(MIN_PROGRESSION_LENGTH, MAX_PROGRESSION_LENGTH);
-            int firstRandomNumber = Engine.numberRandomize(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
-            int stepProgression = Engine.numberRandomize(MIN_STEP_PROGRESSION, MAX_STEP_PROGRESSION);
+            int progressionLength = Utils.numRandomize(MIN_PROGRESSION_LENGTH, MAX_PROGRESSION_LENGTH);
+            int firstRandomNumber = Utils.numRandomize(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
+            int stepProgression = Utils.numRandomize(MIN_STEP_PROGRESSION, MAX_STEP_PROGRESSION);
 
             int[] progressionArray = getProgression(progressionLength, firstRandomNumber, stepProgression);
-            int indexOfHiddenProgressionNumber = (Engine.numberRandomize(MIN_RANDOM_NUMBER, progressionLength));
+            int indexOfHiddenProgressionNumber = (Utils.numRandomize(MIN_RANDOM_NUMBER, progressionLength));
             String progressionArrayWithHiddenNumber =
                     getProgressionWithHiddenNumber(progressionArray, indexOfHiddenProgressionNumber);
 
