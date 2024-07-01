@@ -1,6 +1,5 @@
 package hexlet.code;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class Engine {
@@ -33,17 +32,5 @@ public class Engine {
             }
         }
         System.out.println("Congratulations, " + userName + "!");
-    }
-
-    public static int numberRandomize(int minRandomNumber, int maxRandomNumber) {
-        Random random = new Random();
-
-        return random.nextInt(minRandomNumber, maxRandomNumber);
-    }
-
-    public static String mathOperationRandomize(String[] mathOperation) {
-        Random random = new Random();
-
-        return mathOperation[random.nextInt(mathOperation.length)];
     }
 }
