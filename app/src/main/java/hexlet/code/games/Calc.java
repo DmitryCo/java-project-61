@@ -31,7 +31,7 @@ public class Calc {
             case " + " -> Integer.toString(firstRandomNumber + secondRandomNumber);
             case " - " -> Integer.toString(firstRandomNumber - secondRandomNumber);
             case " * " -> Integer.toString(firstRandomNumber * secondRandomNumber);
-            default -> null;
+            default -> throw new IllegalArgumentException("Unknown operator!");
         };
     }
 }
