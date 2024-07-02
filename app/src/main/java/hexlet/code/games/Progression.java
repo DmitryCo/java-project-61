@@ -18,38 +18,38 @@ public class Progression {
 
         for (String[] gameQuestionAndAnswer : gameQuestionsAndAnswers) {
             int progressionLength = Utils.numRandomize(MIN_PROGRESSION_LENGTH, MAX_PROGRESSION_LENGTH);
-            int firstRandomNumber = Utils.numRandomize(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
+            int firstRandomNum = Utils.numRandomize(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
             int stepProgression = Utils.numRandomize(MIN_STEP_PROGRESSION, MAX_STEP_PROGRESSION);
 
-            int[] progressionArray = getProgression(progressionLength, firstRandomNumber, stepProgression);
-            int indexOfHiddenProgressionNumber = (Utils.numRandomize(MIN_RANDOM_NUMBER, progressionLength));
-            String progressionArrayWithHiddenNumber =
-                    getProgressionWithHiddenNumber(progressionArray, indexOfHiddenProgressionNumber);
+            int[] progressionArray = getProgression(progressionLength, firstRandomNum, stepProgression);
+            int indexOfHiddenNum = (Utils.numRandomize(MIN_RANDOM_NUMBER, progressionLength));
+            String progressionArrayWithHiddenNum =
+                    String.join(" ", getProgressionWithHiddenNum(progressionArray, indexOfHiddenNum));
 
-            gameQuestionAndAnswer[Engine.INDEX_OF_QUESTION_IN_ARRAY] = progressionArrayWithHiddenNumber;
+            gameQuestionAndAnswer[Engine.INDEX_OF_QUESTION_IN_ARRAY] = progressionArrayWithHiddenNum;
             gameQuestionAndAnswer[Engine.INDEX_OF_CORRECT_ANSWER_IN_ARRAY] =
-                    Integer.toString(progressionArray[indexOfHiddenProgressionNumber]);
+                    Integer.toString(progressionArray[indexOfHiddenNum]);
         }
         Engine.runGame(RULE_OF_PROGRESSION_GAME, gameQuestionsAndAnswers);
     }
 
-    public static int[] getProgression(int progressionLength, int firstRandomNumber, int stepProgression) {
+    public static int[] getProgression(int progressionLength, int firstRandomNum, int stepProgression) {
         int[] progression = new int[progressionLength];
-        progression[0] = firstRandomNumber;
-        int nextNumberInProgression = firstRandomNumber;
+        progression[0] = firstRandomNum;
+        int nextNumInProgression = firstRandomNum;
         for (int i = 1; i < progression.length; i++) {
-            nextNumberInProgression += stepProgression;
-            progression[i] = nextNumberInProgression;
+            nextNumInProgression += stepProgression;
+            progression[i] = nextNumInProgression;
         }
         return progression;
     }
 
-    public static String getProgressionWithHiddenNumber(int[] progressionArray, int indexOfHiddenProgressionNumber) {
-        String[] progressionWithHiddenNumber = new String[progressionArray.length];
+    public static String[] getProgressionWithHiddenNum(int[] progressionArray, int indexOfHiddenNum) {
+        String[] progressionWithHiddenNum = new String[progressionArray.length];
         for (int i = 0; i < progressionArray.length; i++) {
-            progressionWithHiddenNumber[i] = Integer.toString(progressionArray[i]);
+            progressionWithHiddenNum[i] = Integer.toString(progressionArray[i]);
         }
-        progressionWithHiddenNumber[indexOfHiddenProgressionNumber] = "..";
-        return String.join(" ", progressionWithHiddenNumber);
+        progressionWithHiddenNum[indexOfHiddenNum] = "..";
+        return progressionWithHiddenNum;
     }
 }
