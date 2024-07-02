@@ -15,12 +15,12 @@ public class Even {
         for (String[] gameQuestionAndAnswer : gameQuestionsAndAnswers) {
             int questionNumber = Utils.numRandomize(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
             gameQuestionAndAnswer[Engine.INDEX_OF_QUESTION_IN_ARRAY] = Integer.toString(questionNumber);
-            gameQuestionAndAnswer[Engine.INDEX_OF_CORRECT_ANSWER_IN_ARRAY] = isEven(questionNumber);
+            gameQuestionAndAnswer[Engine.INDEX_OF_CORRECT_ANSWER_IN_ARRAY] = isEven(questionNumber) ? "yes" : "no";
         }
         Engine.runGame(RULE_OF_EVEN_GAME, gameQuestionsAndAnswers);
     }
 
-    public static String isEven(int questionNumber) {
-        return questionNumber % 2 == 0 ? "yes" : "no";
+    public static boolean isEven(int questionNumber) {
+        return questionNumber % 2 == 0;
     }
 }
