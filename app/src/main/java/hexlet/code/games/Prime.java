@@ -15,19 +15,19 @@ public class Prime {
         for (String[] gameQuestionAndAnswer : gameQuestionsAndAnswers) {
             int questionNumber = Utils.numRandomize(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
             gameQuestionAndAnswer[Engine.INDEX_OF_QUESTION_IN_ARRAY] = Integer.toString(questionNumber);
-            gameQuestionAndAnswer[Engine.INDEX_OF_CORRECT_ANSWER_IN_ARRAY] = isPrime(questionNumber);
+            gameQuestionAndAnswer[Engine.INDEX_OF_CORRECT_ANSWER_IN_ARRAY] = isPrime(questionNumber) ? "yes" : "no";
         }
         Engine.runGame(RULE_OF_EVEN_GAME, gameQuestionsAndAnswers);
     }
 
-    public static String isPrime(int questionNumber) {
+    public static boolean isPrime(int questionNumber) {
         if (questionNumber == 1) {
-            return "no";
+            return false;
         }
-        String answer = "yes";
+        boolean answer = true;
         for (int i = 2; i <= Math.sqrt(questionNumber); i++) {
             if ((questionNumber % i) == 0) {
-                answer = "no";
+                answer = false;
                 break;
             }
         }
