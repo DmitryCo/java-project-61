@@ -21,16 +21,16 @@ public class Calc {
             gameQuestionAndAnswer[Engine.INDEX_OF_QUESTION_IN_ARRAY] =
                     firstRandomNumber + mathOperator + secondRandomNumber;
             gameQuestionAndAnswer[Engine.INDEX_OF_CORRECT_ANSWER_IN_ARRAY] =
-                    calcExpression(mathOperator, firstRandomNumber, secondRandomNumber);
+                    Integer.toString(calcExpression(mathOperator, firstRandomNumber, secondRandomNumber));
         }
         Engine.runGame(RULE_OF_EVEN_GAME, gameQuestionsAndAnswers);
     }
 
-    public static String calcExpression(String mathOperator, int firstRandomNumber, int secondRandomNumber) {
+    public static int calcExpression(String mathOperator, int firstRandomNumber, int secondRandomNumber) {
         return switch (mathOperator) {
-            case " + " -> Integer.toString(firstRandomNumber + secondRandomNumber);
-            case " - " -> Integer.toString(firstRandomNumber - secondRandomNumber);
-            case " * " -> Integer.toString(firstRandomNumber * secondRandomNumber);
+            case " + " -> firstRandomNumber + secondRandomNumber;
+            case " - " -> firstRandomNumber - secondRandomNumber;
+            case " * " -> firstRandomNumber * secondRandomNumber;
             default -> throw new IllegalArgumentException("Unknown operator!");
         };
     }
