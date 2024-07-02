@@ -18,14 +18,14 @@ public class GCD {
             gameQuestionAndAnswer[Engine.INDEX_OF_QUESTION_IN_ARRAY] =
                     firstRandomNumber + " " + secondRandomNumber;
             gameQuestionAndAnswer[Engine.INDEX_OF_CORRECT_ANSWER_IN_ARRAY] =
-                    defineGCD(firstRandomNumber, secondRandomNumber);
+                    Integer.toString(defineGCD(firstRandomNumber, secondRandomNumber));
         }
         Engine.runGame(RULE_OF_GCD_GAME, gameQuestionsAndAnswers);
     }
 
-    public static String defineGCD(int firstRandomNumber, int secondRandomNumber) {
+    public static int defineGCD(int firstRandomNumber, int secondRandomNumber) {
         if (secondRandomNumber == 0) {
-            return Integer.toString(firstRandomNumber);
+            return firstRandomNumber;
         }
         return defineGCD(secondRandomNumber, firstRandomNumber % secondRandomNumber);
     }
