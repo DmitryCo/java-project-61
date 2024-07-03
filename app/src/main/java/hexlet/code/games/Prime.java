@@ -4,9 +4,9 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Prime {
-    public static final String RULE_OF_EVEN_GAME = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-    public static final int MIN_RANDOM_NUMBER = 1;
-    public static final int MAX_RANDOM_NUMBER = 100;
+    private static final String RULE_OF_EVEN_GAME = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    private static final int MIN_RANDOM_NUMBER = 1;
+    private static final int MAX_RANDOM_NUMBER = 100;
 
     public static void startPrimeGame() {
         String[][] gameQuestionsAndAnswers =
@@ -21,7 +21,7 @@ public class Prime {
     }
 
     public static boolean isPrime(int questionNumber) {
-        if (questionNumber == 1) {
+        if (questionNumber < 2) {
             return false;
         }
         boolean answer = true;
