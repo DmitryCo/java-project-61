@@ -4,13 +4,13 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Progression {
-    public static final String RULE_OF_PROGRESSION_GAME = "What number is missing in the progression?";
-    public static final int MIN_PROGRESSION_LENGTH = 8;
-    public static final int MAX_PROGRESSION_LENGTH = 11;
-    public static final int MIN_RANDOM_NUMBER = 1;
-    public static final int MAX_RANDOM_NUMBER = 100;
-    public static final int MIN_STEP_PROGRESSION = 1;
-    public static final int MAX_STEP_PROGRESSION = 10;
+    private static final String RULE_OF_PROGRESSION_GAME = "What number is missing in the progression?";
+    private static final int MIN_PROGRESSION_LENGTH = 8;
+    private static final int MAX_PROGRESSION_LENGTH = 11;
+    private static final int MIN_RANDOM_NUMBER = 1;
+    private static final int MAX_RANDOM_NUMBER = 100;
+    private static final int MIN_STEP_PROGRESSION = 1;
+    private static final int MAX_STEP_PROGRESSION = 10;
 
     public static void startProgressionGame() {
         String[][] gameQuestionsAndAnswers =
@@ -35,11 +35,8 @@ public class Progression {
 
     public static int[] getProgression(int progressionLength, int firstRandomNum, int stepProgression) {
         int[] progression = new int[progressionLength];
-        progression[0] = firstRandomNum;
-        int nextNumInProgression = firstRandomNum;
-        for (int i = 1; i < progression.length; i++) {
-            nextNumInProgression += stepProgression;
-            progression[i] = nextNumInProgression;
+        for (int i = 0; i < progression.length; i++) {
+            progression[i] = firstRandomNum + stepProgression * i;
         }
         return progression;
     }
