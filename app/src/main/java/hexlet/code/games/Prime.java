@@ -13,20 +13,20 @@ public class Prime {
                 new String[Engine.TOTAL_CORRECT_ANSWERS_FOR_WIN][Engine.NUMBER_OF_ELEMENTS_OF_GAME_IN_ARRAY];
 
         for (String[] gameQuestionAndAnswer : gameQuestionsAndAnswers) {
-            int questionNumber = Utils.numRandomize(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
-            gameQuestionAndAnswer[Engine.INDEX_OF_QUESTION_IN_ARRAY] = Integer.toString(questionNumber);
-            gameQuestionAndAnswer[Engine.INDEX_OF_CORRECT_ANSWER_IN_ARRAY] = isPrime(questionNumber) ? "yes" : "no";
+            int questionNum = Utils.numRandomize(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
+            gameQuestionAndAnswer[Engine.INDEX_OF_QUESTION_IN_ARRAY] = Integer.toString(questionNum);
+            gameQuestionAndAnswer[Engine.INDEX_OF_CORRECT_ANSWER_IN_ARRAY] = isPrime(questionNum) ? "yes" : "no";
         }
         Engine.runGame(RULE_OF_EVEN_GAME, gameQuestionsAndAnswers);
     }
 
-    public static boolean isPrime(int questionNumber) {
-        if (questionNumber < 2) {
+    private static boolean isPrime(int questionNum) {
+        if (questionNum < 2) {
             return false;
         }
         boolean answer = true;
-        for (int i = 2; i <= Math.sqrt(questionNumber); i++) {
-            if ((questionNumber % i) == 0) {
+        for (int i = 2; i <= Math.sqrt(questionNum); i++) {
+            if ((questionNum % i) == 0) {
                 answer = false;
                 break;
             }

@@ -28,7 +28,7 @@ public class App {
         selectGames(userChoice);
     }
 
-    static void selectGames(String userChoice) {
+    private static void selectGames(String userChoice) {
         switch (userChoice) {
             case "1" -> Cli.getUserName();
             case "2" -> Even.startEvenGame();
@@ -36,8 +36,8 @@ public class App {
             case "4" -> GCD.startGCDGame();
             case "5" -> Progression.startProgressionGame();
             case "6" -> Prime.startPrimeGame();
-            case "0" -> System.out.println("0 - Exit");
-            default -> System.out.println("Wrong number entered. Please try again.");
+            case "0" -> System.out.println("Goodbye! See you later!");
+            default -> throw new IllegalArgumentException("Wrong number entered. Please try again.");
         }
     }
 }

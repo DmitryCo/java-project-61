@@ -18,8 +18,8 @@ public class Engine {
         System.out.println(ruleOfGame);
 
         for (String[] gameQuestionAndAnswer : gameQuestionsAndAnswers) {
-            String question = gameQuestionAndAnswer[0];
-            String answer = gameQuestionAndAnswer[1];
+            String question = gameQuestionAndAnswer[INDEX_OF_QUESTION_IN_ARRAY];
+            String answer = gameQuestionAndAnswer[INDEX_OF_CORRECT_ANSWER_IN_ARRAY];
             System.out.println("Question: " + question);
             System.out.print("Your answer: ");
             String userAnswer = scanner.next();
