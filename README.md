@@ -1,4 +1,4 @@
-# Brain Games
+# <h1 align="center">Brain Games</h1>
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/DmitryCo/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/DmitryCo/java-project-61/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/bbc5e74e07e9f42af423/maintainability)](https://codeclimate.com/github/DmitryCo/java-project-61/maintainability)
@@ -11,6 +11,18 @@
 ### • Determining the greatest common divisor.
 ### • Progression. Finding missing numbers in a sequence of numbers.
 ### • Determining a prime number.
+
+### Setup:
+```bash
+    git clone git@github.com:DmitryCo/java-project-61.git
+    cd java-project-61
+    make build
+```
+
+### Run:
+```bash
+    make run
+```
 
 ## Game launch examples (asciinema format):
 ### "Is Even"
