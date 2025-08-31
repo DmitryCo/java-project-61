@@ -1,6 +1,7 @@
 plugins {
     id("java")
     id("com.github.ben-manes.versions") version "0.52.0"
+    id("org.sonarqube") version "6.3.1.5724"
     application
     checkstyle
 }
@@ -27,4 +28,11 @@ tasks.getByName("run", JavaExec::class) {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+sonar {
+    properties {
+        property("sonar.projectKey", "DmitryCo_java-project-61")
+        property("sonar.organization", "dmitryco")
+    }
 }
