@@ -2,6 +2,9 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/DmitryCo/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/DmitryCo/java-project-61/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/bbc5e74e07e9f42af423/maintainability)](https://codeclimate.com/github/DmitryCo/java-project-61/maintainability)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=DmitryCo_java-project-61&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=DmitryCo_java-project-61)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=DmitryCo_java-project-61&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=DmitryCo_java-project-61)
+
 
 ### Description
 "Brain Games" - a set of five console games, built on the principle of popular mobile applications for pumping the brain. Each game asks questions to which you need to give correct answers. After three correct answers, the game is considered to be completed. Incorrect answers end the game and prompt you to go through it again.
