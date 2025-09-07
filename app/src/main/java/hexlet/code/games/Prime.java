@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Prime {
-    private static final String RULE_OF_EVEN_GAME = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    private static final String RULE_OF_PRIME_GAME = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     private static final int MIN_RANDOM_NUMBER = 1;
     private static final int MAX_RANDOM_NUMBER = 100;
 
@@ -17,7 +17,7 @@ public class Prime {
             gameQuestionAndAnswer[Engine.INDEX_OF_QUESTION_IN_ARRAY] = Integer.toString(questionNum);
             gameQuestionAndAnswer[Engine.INDEX_OF_CORRECT_ANSWER_IN_ARRAY] = isPrime(questionNum) ? "yes" : "no";
         }
-        Engine.runGame(RULE_OF_EVEN_GAME, gameQuestionsAndAnswers);
+        Engine.runGame(RULE_OF_PRIME_GAME, gameQuestionsAndAnswers);
     }
 
     private static boolean isPrime(int questionNum) {

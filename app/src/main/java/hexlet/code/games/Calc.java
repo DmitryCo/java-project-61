@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Calc {
-    private static final String RULE_OF_EVEN_GAME = "What is the result of the expression?";
+    private static final String RULE_OF_CALC_GAME = "What is the result of the expression?";
     private static final int MIN_RANDOM_NUMBER = 1;
     private static final int MAX_RANDOM_NUMBER = 100;
     private static final String[] MATH_OPERATIONS = {" + ", " - ", " * "};
@@ -24,7 +24,7 @@ public class Calc {
             gameQuestionAndAnswer[Engine.INDEX_OF_CORRECT_ANSWER_IN_ARRAY] =
                     Integer.toString(calcExpression(mathOperator, firstRandNum, secondRandNum));
         }
-        Engine.runGame(RULE_OF_EVEN_GAME, gameQuestionsAndAnswers);
+        Engine.runGame(RULE_OF_CALC_GAME, gameQuestionsAndAnswers);
     }
 
     private static int calcExpression(String mathOperator, int firstRandNum, int secondRandNum) {
