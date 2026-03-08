@@ -1,22 +1,22 @@
 .DEFAULT_GOAL := build-run
 
+run:
+	./gradlew run
+
 run-dist:
 	./build/install/app/bin/app
 
 clean:
-	make -C app clean
+	./gradlew clean
 
 build:
-	make -C app clean build
-
-run:
-	make -C app run
+	./gradlew clean build
 
 install:
-	make -C app clean install
+	./gradlew clean install
 
 lint:
-	make -C app checkstyleMain
+	./gradlew checkstyleMain
 
 build-run: build run
 
